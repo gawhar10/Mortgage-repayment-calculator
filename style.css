@@ -349,7 +349,7 @@ form button img {
   .container {
     margin: unset;
     grid-template-columns: none;
-    grid-auto-rows: max-content;
+    grid-auto-rows: 1fr;
   }
 
   .app_header {
