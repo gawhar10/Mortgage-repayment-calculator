@@ -349,7 +349,7 @@ form button img {
   .container {
     margin: unset;
     grid-template-columns: none;
-    grid-auto-rows: 1fr;
+    grid-auto-rows: max-content;
   }
 
   .app_header {
@@ -371,5 +371,16 @@ form button img {
   .term_label,
   .rate_label {
     margin-top: 1.5rem;
+  }
+  /* dynamic added styles */
+  .right_pane {
+    justify-content: flex-start;
+    padding: 6rem 2rem;
+  }
+  .right_pane h2 {
+    font-size: 1.8rem;
+  }
+  #resultDiscription {
+    font-size: 1.2rem;
   }
 }
