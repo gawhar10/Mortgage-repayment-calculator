@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage repayment calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left_pane">
+        <div class="app_header">
+          <h1>Mortgage Calculaor</h1>
+          <button id="clearAll">Clear All</button>
+        </div>
+
+        <form>
+          <label class="amount_label" for="amount">Mortgage Amount</label>
+          <div class="input_div_amount" id="amountDiv">
+            <p class="amount_sign" id="amountSign">$</p>
+            <input type="number" name="mortgage_amount" id="amount" />
+          </div>
+          <p class="warning_msg" id="amountWarningMsg">
+            This field is required
+          </p>
+          <div class="term_rate_container">
+            <div>
+              <label class="term_label" for="term">Mortgage Term</label>
+              <div class="input_div" id="termDiv">
+                <input type="number" name="mortgage_term" id="term" />
+                <p class="year_percent_sign" id="termSign">years</p>
+              </div>
+              <p class="warning_msg" id="termWarningMsg">
+                This field is required
+              </p>
+            </div>
+            <div>
+              <label class="rate_label" for="rate">Interest Rate</label>
+              <div class="input_div" id="rateDiv">
+                <input
+                  type="number"
+                  step="0.01"
+                  name="mortgage_rate"
+                  id="rate"
+                />
+                <p class="year_percent_sign" id="rateSign">%</p>
+              </div>
+              <p class="warning_msg" id="rateWarningMsg">
+                This field is required
+              </p>
+            </div>
+          </div>
+
+          <div class="choice_container">
+            <p>Mortgage Type</p>
+            <div>
+              <input
+                class="radio_input"
+                type="radio"
+                name="choice"
+                value="option1"
+                id="repayment"
+                checked
+              />
+              <label class="choice_label" for="repayment">Repayment</label>
+            </div>
+            <div>
+              <input
+                class="radio_input"
+                type="radio"
+                name="choice"
+                value="option2"
+                id="interestOnly"
+              />
+              <label for="interestOnly">Interest Only</label>
+            </div>
+          </div>
+          <button id="calculateBtn" type="submit">
+            <img src="./images/icon-calculator.svg" alt="" /> Calculate
+            Repayments
+          </button>
+        </form>
+      </div>
+      <div class="right_pane">
+        <img
+          class="right_pane_img"
+          src="./images/illustration-empty.svg"
+          alt=""
+        />
+        <h2 id="resultHeading">Results shown here</h2>
+        <p id="resultDiscription">
+          Complete the form and click “calculate repayments” to see what your
+          monthly repayments would be.
+        </p>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
